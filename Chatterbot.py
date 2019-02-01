@@ -119,7 +119,7 @@ Fight1 = input("Oh no an enemy, jumps out and challenges you. Will you *Fight*, 
 Your_HP = 10
 Enemey_HP = 5
              
-if Fight1 == "Fight":
+if Fight1.lower() == "fight":
     import random
     Combat = random.randint(1,12)
     if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
