@@ -2,6 +2,7 @@
 ##Jose Vest
 #####1.29.2019
 
+
 #Exposition
 print ("Welcome to Caeruleum, this will tell the tale of... you")
 name = input("What is your name?")
@@ -114,23 +115,113 @@ elif Merchant_Question.lower() == "head out":
 
 print("You and Ada head out, hopeful this won't be very hard. Then almost as if the enemy heard me jinx it one of Zardon's custodi jumps out. This will be a tutorial of combat")
 
-Fight1 = input("Oh no an enemy, jumps out and challenges you. Will you *Fight*, *Heal*, or *Run*. (Your health starts at 10 HP in any battle, enemys have 5")
+print("Oh no an enemey jumps out, (You have 10 health, the enemey has 5. You can fight, try and heal, or try and run. The enemey will always attack)")
 
 Your_HP = 10
 Enemey_HP = 5
              
-if Fight1.lower() == "fight":
+while Enemey_HP > 0 and Your_HP > 0:
+    Fight1 = input ("Will you *Fight*, *Heal*, or *Run*. ")
+    if Fight1.lower() == "fight":
+        import random
+        Combat = random.randint(1,12)
+        if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
+                   print ("Miss")
+
+        if Combat == 6 or Combat == 7 or Combat == 8:
+            Enemey_HP = Enemey_HP - 1
+            print ("Hit Enemey HP at ")
+            print (Enemey_HP)
+                   
+
+        if Combat == 9 or Combat == 10:
+            Enemey_HP = Enemey_HP - 2
+            print ("Hit Enemey HP at ")
+            print (Enemey_HP)
+
+        if Combat == 11 or Combat == 12:
+            Enemey_HP = Enemey_HP - 3
+            print("Hit Enemey HP at ")
+            print (Enemey_HP)
+
+    
+    print("The Enemey prepares an attack")
+    
     import random
-    Combat = random.randint(1,12)
-    if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
-               print ("Miss")
+    CCombat = random.randint(1,12)
+    if CCombat == 1 or CCombat == 2 or CCombat == 3 or CCombat == 4 or CCombat == 5:
+        print("The enemey miss")
 
-    if Combat == 6 or Combat == 7 or Combat == 8:
-               print ("Hit Enemey HP at 4")
-               Enemey_HP = Enemey_HP - 1
+    if CCombat == 6 or CCombat == 7 or CCombat == 8:
+        Your_HP = Your_HP - 1
+        print ("Hit Your HP at ")
+        print (Your_HP)
+                   
 
-    if Combat == 9 or Combat == 10:
-        print ("Hit Enemey HP at 3")
-        Enemey_HP = Enemey_HP - 2
+    if CCombat == 9 or CCombat == 10:
+        Your_HP = Your_HP - 2
+        print ("Hit Your HP at ")
+        print (Your_HP)
+
+    if CCombat == 11 or CCombat == 12:
+        Your_HP = Your_HP - 3
+        print("Hit Your HP at ")
+        print (Your_HP)
+
+if Enemey_HP <= 0:
+    print ("The enemey is dead")
+
+while Enemey_HP > 0:
+    if Your_HP <= 0:
+        Your_HP = 10
+        Enemey_HP = 5
+        print ("You have died. You will restart.")
+        while Enemey_HP > 0 and Your_HP > 0:
+            Fight1 = input ("Will you *Fight*, *Heal*, or *Run*. ")
+            if Fight1.lower() == "fight":
+                import random
+                Combat = random.randint(1,12)
+                if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
+                           print ("Miss")
+
+                if Combat == 6 or Combat == 7 or Combat == 8:
+                    Enemey_HP = Enemey_HP - 1
+                    print ("Hit Enemey HP at ")
+                    print (Enemey_HP)
+                           
+
+                if Combat == 9 or Combat == 10:
+                    Enemey_HP = Enemey_HP - 2
+                    print ("Hit Enemey HP at ")
+                    print (Enemey_HP)
+
+                if Combat == 11 or Combat == 12:
+                    Enemey_HP = Enemey_HP - 3
+                    print("Hit Enemey HP at ")
+                    print (Enemey_HP)
+
+            
+            print("The Enemey prepares an attack")
+            
+            import random
+            CCombat = random.randint(1,12)
+            if CCombat == 1 or CCombat == 2 or CCombat == 3 or CCombat == 4 or CCombat == 5:
+                print("The enemey miss")
+
+            if CCombat == 6 or CCombat == 7 or CCombat == 8:
+                Your_HP = Your_HP - 1
+                print ("Hit Your HP at ")
+                print (Your_HP)
+                           
+
+            if CCombat == 9 or CCombat == 10:
+                Your_HP = Your_HP - 2
+                print ("Hit Your HP at ")
+                print (Your_HP)
+
+            if CCombat == 11 or CCombat == 12:
+                Your_HP = Your_HP - 3
+                print("Hit Your HP at ")
+                print (Your_HP)
         
                
