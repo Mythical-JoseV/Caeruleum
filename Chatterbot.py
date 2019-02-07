@@ -2,6 +2,165 @@
 ##Jose Vest
 #####1.29.2019
 
+#Combat Functions
+Your_HP = 10
+Enemey_HP = 5
+def Fight():
+    Your_HP = 10
+    Enemey_HP = 5
+    while Enemey_HP > 0 and Your_HP > 0:
+        Fight1 = input ("Will you *Fight*, *Heal*, or *Run*. ")
+        if Fight1.lower() == "run":
+            import random
+            Run = random.randint(1,100)
+
+            if Run == 1:
+                print("You escape")
+                break
+
+            elif Run != 1:
+                print("You couldn't run fast enough")
+
+        if Fight1.lower() == "heal":
+           import random
+           Heal = random.randint(1,3)
+           if Heal == 1 or Heal == 2 and Your_HP < 10:
+               Your_HP = Your_HP + 1
+               print("Your healed your HP is now")
+               print(Your_HP)
+
+           elif Heal == 3 or Your_HP >= 10:
+               print("You failed to heal, try again next time")
+        
+        if Fight1.lower() == "fight":
+            import random
+            Combat = random.randint(1,12)
+            if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
+                       print ("Miss")
+
+            if Combat == 6 or Combat == 7 or Combat == 8:
+                Enemey_HP = Enemey_HP - 1
+                print ("Hit Enemey HP at ")
+                print (Enemey_HP)
+                       
+
+            if Combat == 9 or Combat == 10:
+                Enemey_HP = Enemey_HP - 2
+                print ("Hit Enemey HP at ")
+                print (Enemey_HP)
+
+            if Combat == 11 or Combat == 12:
+                Enemey_HP = Enemey_HP - 3
+                print("Hit Enemey HP at ")
+                print (Enemey_HP)
+
+        
+        print("The Enemey prepares an attack")
+        
+        import random
+        CCombat = random.randint(1,12)
+        if CCombat == 1 or CCombat == 2 or CCombat == 3 or CCombat == 4 or CCombat == 5:
+            print("The enemey miss")
+
+        if CCombat == 6 or CCombat == 7 or CCombat == 8:
+            Your_HP = Your_HP - 1
+            print ("Hit Your HP at ")
+            print (Your_HP)
+                       
+
+        if CCombat == 9 or CCombat == 10:
+            Your_HP = Your_HP - 2
+            print ("Hit Your HP at ")
+            print (Your_HP)
+
+        if CCombat == 11 or CCombat == 12:
+            Your_HP = Your_HP - 3
+            print("Hit Your HP at ")
+            print (Your_HP)
+
+    if Enemey_HP <= 0:
+        print ("The enemey is dead")
+
+    while Enemey_HP > 0:
+        if Your_HP <= 0:
+            Your_HP = 10
+            Enemey_HP = 5
+            print ("You have died. You will restart.")
+            print("Oh no an enemey jumps out, (You have 10 health, the enemey has 5. You can fight, try and heal, or try and run. The enemey will always attack)")
+            while Enemey_HP > 0 and Your_HP > 0:
+                Fight1 = input ("Will you *Fight*, *Heal*, or *Run*. ")
+                if Fight1.lower() == "run":
+                    import random
+                    Run = random.randint(1,25)
+
+                    if Run == 1:
+                        print("You escaped")
+                        break
+
+                    elif Run != 1:
+                         print("You couldn't run fast enough")
+
+                if Fight1.lower() == "heal":
+                   import random
+                   Heal = random.randint(1,3)
+                   if Heal == 1 or Heal == 2 and Your_HP < 10:
+                       Your_HP = Your_HP + 1
+                       print("Your healed your HP is now")
+                       print(Your_HP)
+
+                   elif Heal == 3 or Your_HP >= 10:
+                       print("You failed to heal, try again next time")
+                
+                if Fight1.lower() == "fight":
+                    import random
+                    Combat = random.randint(1,12)
+                    if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
+                               print ("Miss")
+
+                    if Combat == 6 or Combat == 7 or Combat == 8:
+                        Enemey_HP = Enemey_HP - 1
+                        print ("Hit Enemey HP at ")
+                        print (Enemey_HP)
+                               
+
+                    if Combat == 9 or Combat == 10:
+                        Enemey_HP = Enemey_HP - 2
+                        print ("Hit Enemey HP at ")
+                        print (Enemey_HP)
+
+                    if Combat == 11 or Combat == 12:
+                        Enemey_HP = Enemey_HP - 3
+                        print("Hit Enemey HP at ")
+                        print (Enemey_HP)
+
+                
+                print("The Enemey prepares an attack")
+                
+                import random
+                CCombat = random.randint(1,12)
+                if CCombat == 1 or CCombat == 2 or CCombat == 3 or CCombat == 4 or CCombat == 5:
+                    print("The enemey miss")
+
+                if CCombat == 6 or CCombat == 7 or CCombat == 8:
+                    Your_HP = Your_HP - 1
+                    print ("Hit Your HP at ")
+                    print (Your_HP)
+                               
+
+                if CCombat == 9 or CCombat == 10:
+                    Your_HP = Your_HP - 2
+                    print ("Hit Your HP at ")
+                    print (Your_HP)
+
+                if CCombat == 11 or CCombat == 12:
+                    Your_HP = Your_HP - 3
+                    print("Hit Your HP at ")
+                    print (Your_HP)
+
+                if Enemey_HP <= 0:
+                    print ("The enemey is dead")
+
+
 
 #Exposition
 print ("Welcome to Caeruleum, this will tell the tale of... you")
@@ -117,111 +276,4 @@ print("You and Ada head out, hopeful this won't be very hard. Then almost as if 
 
 print("Oh no an enemey jumps out, (You have 10 health, the enemey has 5. You can fight, try and heal, or try and run. The enemey will always attack)")
 
-Your_HP = 10
-Enemey_HP = 5
-             
-while Enemey_HP > 0 and Your_HP > 0:
-    Fight1 = input ("Will you *Fight*, *Heal*, or *Run*. ")
-    if Fight1.lower() == "fight":
-        import random
-        Combat = random.randint(1,12)
-        if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
-                   print ("Miss")
-
-        if Combat == 6 or Combat == 7 or Combat == 8:
-            Enemey_HP = Enemey_HP - 1
-            print ("Hit Enemey HP at ")
-            print (Enemey_HP)
-                   
-
-        if Combat == 9 or Combat == 10:
-            Enemey_HP = Enemey_HP - 2
-            print ("Hit Enemey HP at ")
-            print (Enemey_HP)
-
-        if Combat == 11 or Combat == 12:
-            Enemey_HP = Enemey_HP - 3
-            print("Hit Enemey HP at ")
-            print (Enemey_HP)
-
-    
-    print("The Enemey prepares an attack")
-    
-    import random
-    CCombat = random.randint(1,12)
-    if CCombat == 1 or CCombat == 2 or CCombat == 3 or CCombat == 4 or CCombat == 5:
-        print("The enemey miss")
-
-    if CCombat == 6 or CCombat == 7 or CCombat == 8:
-        Your_HP = Your_HP - 1
-        print ("Hit Your HP at ")
-        print (Your_HP)
-                   
-
-    if CCombat == 9 or CCombat == 10:
-        Your_HP = Your_HP - 2
-        print ("Hit Your HP at ")
-        print (Your_HP)
-
-    if CCombat == 11 or CCombat == 12:
-        Your_HP = Your_HP - 3
-        print("Hit Your HP at ")
-        print (Your_HP)
-
-if Enemey_HP <= 0:
-    print ("The enemey is dead")
-
-while Enemey_HP > 0:
-    if Your_HP <= 0:
-        Your_HP = 10
-        Enemey_HP = 5
-        print ("You have died. You will restart.")
-        while Enemey_HP > 0 and Your_HP > 0:
-            Fight1 = input ("Will you *Fight*, *Heal*, or *Run*. ")
-            if Fight1.lower() == "fight":
-                import random
-                Combat = random.randint(1,12)
-                if Combat == 1 or Combat == 2 or Combat == 3 or Combat == 4 or Combat == 5:
-                           print ("Miss")
-
-                if Combat == 6 or Combat == 7 or Combat == 8:
-                    Enemey_HP = Enemey_HP - 1
-                    print ("Hit Enemey HP at ")
-                    print (Enemey_HP)
-                           
-
-                if Combat == 9 or Combat == 10:
-                    Enemey_HP = Enemey_HP - 2
-                    print ("Hit Enemey HP at ")
-                    print (Enemey_HP)
-
-                if Combat == 11 or Combat == 12:
-                    Enemey_HP = Enemey_HP - 3
-                    print("Hit Enemey HP at ")
-                    print (Enemey_HP)
-
-            
-            print("The Enemey prepares an attack")
-            
-            import random
-            CCombat = random.randint(1,12)
-            if CCombat == 1 or CCombat == 2 or CCombat == 3 or CCombat == 4 or CCombat == 5:
-                print("The enemey miss")
-
-            if CCombat == 6 or CCombat == 7 or CCombat == 8:
-                Your_HP = Your_HP - 1
-                print ("Hit Your HP at ")
-                print (Your_HP)
-                           
-
-            if CCombat == 9 or CCombat == 10:
-                Your_HP = Your_HP - 2
-                print ("Hit Your HP at ")
-                print (Your_HP)
-
-            if CCombat == 11 or CCombat == 12:
-                Your_HP = Your_HP - 3
-                print("Hit Your HP at ")
-                print (Your_HP)
-        
-               
+Fight()
